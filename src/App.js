@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.less';
+import { Button, Layout, Typography } from 'antd';
+
+const { Content } = Layout;
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Layout>
+        <Content
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Title>React CRA with Ant Design boilerplate</Title>
+          <Button type="primary">Button</Button>
+        </Content>
+      </Layout>
+    </>
   );
 }
 
